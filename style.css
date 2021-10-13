@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh; 
+    width: auto; 
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+    background-color: #ffffffff;
+    border-radius: 40px;
+    width: 1100px;
+    height: 600px;
+    box-shadow: 10px 40px 14px rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1.7fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "images text";
+    margin: 200px;
+}
+
+.pictures {
+    grid-area: images;
+    background: url("images/bg-pattern-desktop.svg") no-repeat white;
+    background-repeat: no-repeat;
+    background-position: 103% 64%;
+}
+
+#box {
+    position: absolute;
+    left: 100px;
+    top: 380px;
+    cursor: pointer;
+}
+
+#w-desk {    
+    z-index: 1;
+    padding-top: 90px;
+    margin-left: -70px;
+    position: inherit;
+}
+
+.text {
+    grid-area: text;
+    color: hsl(237, 12%, 33%);
+    margin-left: 80px;
+    
+    
+}
+
+.text > div > p {
+    position: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 460px;
+    margin-top: -5px;
+    display: none;
+    padding-bottom: 20px;
+}
+
+.text > div {
+    border-bottom: solid #333 1px;
+    max-width: 470px;
+}
+
+.text > div > h2 {
+    margin: 0 80px 0 0;
+    padding: 14px 10px 30px 0;
+    font-size: 16px;
+    max-width: 470px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.text > div > h2 > img {
+    padding: 8px;
+    position: fixed;
+    left: 1134px;
+}
+
+h1 {
+    margin: 40px 0;
+    color: black;
+    font-size: 40px;
+}
+
+h2:hover {
+    color: orangered;
+}
+
+.arrow {
+    transition: 0.5s;
+    transform: rotate();
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        max-width: 375px;
+        
+    }
+
+    main {
+        padding: 0px;
+        margin: 20px 30px 20px 20px;
+        width: 340px;
+        height: 620px;
+        display: inline-block;
+    }
+
+    h1 {
+        margin-top: 140px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
+    #box {
+        left: 63px;
+        cursor: pointer;
+        width: 100px;
+        z-index: 2;
+        top: 62px;
+    }
+
+
+    #w-desk {  
+        position: absolute;  
+        z-index: 1;
+        width: 230px;
+        left: 140px;
+        top: -95px;
+    }
+   
+    .text {
+        margin-left: 30px;
+        max-width: 255px;
+    }
+
+    .text > div > h2 {
+        max-width: 250px;
+        white-space: nowrap; 
+        font-size: 15px;
+        letter-spacing: -1.2px;
+        
+    }
+
+    .text > div > h2 > img {
+        margin-top: 5px;       
+        max-width: 250px;
+        left: 290px;
+        padding: 0px;
+    }
+  
+}
